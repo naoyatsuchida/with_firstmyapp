@@ -2,7 +2,7 @@ class MemosController < ApplicationController
 
   def index
     @memos = Memo.all
-    render json: {status: 'succes' ,message: '全部送ったよ'　, data: @memos}
+    render json: {status: 'succes' ,message: '全部送ったよ' , data: @memos}
   end
   
   def create
