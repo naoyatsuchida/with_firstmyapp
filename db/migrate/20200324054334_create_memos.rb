@@ -4,7 +4,7 @@ class CreateMemos < ActiveRecord::Migration[5.2]
       t.string :title
       t.string :image
       t.text :body
-      t.text :memo
+      t.text :memomemo
 
       t.timestamps
     end
