@@ -2,11 +2,11 @@ class MemosController < ApplicationController
 
   def index
     @memos = Memo.all
-    render json: {status: 'succes' ,message: '全部送ったよ'　, data: @memos}
+    render json: {status: 'succes' ,message: '全部送ったよ' , data: @memos}
   end
   
   def create
-    memo = Memo.find(strong_params)
+    memo = Memo.new(strong_params)
     if memo.save
       render json:{ status: 'success',data: memo}
     else
@@ -33,9 +33,10 @@ class MemosController < ApplicationController
       render json: {status:'success', message: '失敗', data: @memo.errors }
     end
   end
+
   private
   def strong_params
-    params.require(:memo).permit(:title,:image,:body,:memo)
+    params.require(:memo).permit(:title,:image,:body,:memomemo)
   end
 
  

@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Memo.create([
+  {title:'なんや',image:'#',body:'json通ってますかーー？',memo:'もしかしたらうまく行ってないかも'},
+  {title:'我',image:'#',body:'json通ってますかーー？',memo:'もしかしたらうまく行ってないかも'},
+  {title:'テヤンデイ',image:'#',body:'json通ってますかーー？',memo:'もしかしたらうまく行ってないかも'}
+])
