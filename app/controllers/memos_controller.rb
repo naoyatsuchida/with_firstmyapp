@@ -20,12 +20,9 @@ class MemosController < ApplicationController
     render json: {status: 'success', message: '消せたで', data: @memo}
   end
 
-  def show 
-    @memo = Memo.find(params[:id])
-    render json: {data: @memo}
-  end
+  
 
-  def updata
+  def update
     @memo = Memo.find(params[:id])
     if @memo.update(strong_params)
       render json: {status: 'success', message:'更新', data: @memo}
@@ -36,7 +33,7 @@ class MemosController < ApplicationController
 
   private
   def strong_params
-    params.require(:memo).permit(:title,:image,:body,:memomemo)
+    params.require(:memo).permit(:id,:title,:image,:body,:memomemo)
   end
 
  
