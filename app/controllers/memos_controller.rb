@@ -1,7 +1,7 @@
 class MemosController < ApplicationController
 
   def index
-    @memos = Memo.all
+    @memos = Memo.all.order("created_at  DESC")
     render json: {status: 'succes' ,message: '全部送ったよ' , data: @memos}
   end
   
