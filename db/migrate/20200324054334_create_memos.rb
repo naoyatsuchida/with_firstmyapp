@@ -5,7 +5,7 @@ class CreateMemos < ActiveRecord::Migration[5.2]
       t.text :image
       t.text :body
       t.text :memomemo
-
+      
       t.timestamps
     end
   end
